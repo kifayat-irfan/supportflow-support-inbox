@@ -1,11 +1,32 @@
-<div align="center">
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+# SupportFlow Enterprise Inbox
 
-  <h1>Built with AI Studio</h2>
+A high-performance support ticket management system built with Next.js, Prisma, and Gemini AI.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Getting Started
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### Prerequisites
+- Docker & Docker Compose
+- Google Gemini API Key
 
-</div>
+### Running with Docker
+1. Create a `.env` file or export your `API_KEY`.
+2. Run the services:
+   ```bash
+   docker-compose up --build
+   ```
+3. Initialize the database:
+   ```bash
+   docker-compose exec app npx prisma migrate dev
+   ```
+
+## Architecture
+- **Frontend**: Next.js App Router with Tailwind CSS for a fluid, responsive UI.
+- **Backend**: Next.js Route Handlers for robust API endpoints.
+- **AI**: Google Gemini (gemini-3-flash) for automated summaries and smart replies.
+- **Database**: PostgreSQL with Prisma ORM for type-safe database access.
+- **Auth**: JWT-based session management with secure password hashing via Bcrypt.
+
+## Roles
+- **ADMIN**: Can manage Knowledge Base articles and view all system activity.
+- **AGENT**: Can manage tickets and use AI features to resolve customer issues.

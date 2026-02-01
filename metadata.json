@@ -1,0 +1,5 @@
+{
+  "name": "SupportFlow - Enterprise Support Inbox & KB",
+  "description": "A comprehensive support ticket management system and knowledge base with AI-powered summaries, reply drafts, and KB suggestions using Gemini.",
+  "requestFramePermissions": []
+}
